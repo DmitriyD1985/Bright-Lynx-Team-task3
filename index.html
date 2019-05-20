@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Задание 1</title>
+    <script src="index.js"></script>
+    <style>
+    th
+    {
+    height: 100px;
+    }
+    </style>
+</head>
+<body OnLoad="init()">
+
+
+<h2>Найди пару</h2>
+<form name="f">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <script language="javascript">
+           for (r = 0; r <= 3; r++) {
+                document.write('<tr>');
+                for (c = 0; c <= 3; c++) {
+                    document.write('<td align="center">');
+                    document.write('<a href="javascript:showimage('+((6*r)+c)+')" onClick="document.f.b.focus()">');
+                    document.write('<img src="image0.gif" name="img'+((6*r)+c)+'" border="0">');
+                    document.write('</a></td>');
+                }
+                document.write('</tr>');
+            }
+        </script>
+    </table>
+    <input type="button" value=" " name="b" onClick="init()">
+</form>
+
+<script language="JavaScript" type="text/javascript" src="index.js"></script>
+<form name=MyForm>
+    <input name=stopwatch size=10 value="00:00:00.00">
+    <br>
+    <input type=button value="Старт" onclick="StartStop() ">
+</form>
+</body>
+</html>
